@@ -16,10 +16,6 @@
   </b-container>
 </template>
 
-title: String, 
-    platform: String,
-    releaseDate: String,
-    picture: String
 
 <script>
 import axios from 'axios'
@@ -40,7 +36,6 @@ export default {
   methods: {
     getGames() {
       axios.get("https://www.moogleapi.com/api/v1/games").then(response => {
-        console.log(response.data);
         this.games = response.data;
       });
     }
